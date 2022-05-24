@@ -1,0 +1,35 @@
+#include<iostream>
+#include<cstdlib>
+#include<ctime>
+using namespace std;
+
+int  main()
+{ int  number,guess_number,nguesses=0;
+srand(time(0));
+number=rand()%100+1;
+cout<<number;
+	cout<<"Guess The Number\n";
+//cin>>guess_number;
+do
+{
+		cout<<"Enter the number between 1 and 100\n";
+cin>>guess_number;
+	nguesses++;	
+	if(guess_number>number)
+	
+		cout<<"HIGH NUMBER!!!\n";
+	
+			else if(guess_number<number)
+		
+		cout<<"LOW NUMBER!!!\n"; 
+		else
+		
+		cout<<"WOhhh... You guessed the number in "<<nguesses<<" attempts "<<endl;
+	
+//nguesses++;	
+}
+
+while(guess_number!=number);
+
+	return 0;
+}
